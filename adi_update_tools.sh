@@ -163,8 +163,10 @@ rfsom_box ()
 	git clone https://github.com/emaclean-adi/wpa_supplicant.git
 	cd wpa_supplicant
     cp if_macsec.h /usr/include/linux/
-	cp enc-onoff.sh /usr/local/bin/
+    chmod +x ./install_wpa_supplicant.sh
 	./install_wpa_supplicant.sh
+    cd ../..
+    rm -rf ./crypto
 }
 
 # Allow selective builds by default build the latest release branches
